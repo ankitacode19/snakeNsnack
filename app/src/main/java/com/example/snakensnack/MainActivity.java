@@ -30,10 +30,10 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     private String movingPosition = "right";
     private SurfaceHolder surfaceHolder;
     private int score = 0;
-    private static final int pointSize = 50;
+    private static final int pointSize = 28;
     private static final int defaultTalePoints = 2;
     private static final int snakeColor = Color.rgb(0, 254, 150);
-    private static final int snakeMovingSpeed = 800;
+    private static final int snakeMovingSpeed = 400;
     private int positionX, positionY;
     private Timer timer;
     private Canvas canvas = null;
@@ -73,16 +73,16 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         leftBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!movingPosition.equals("left"));{
-                    movingPosition = "right";
+                if(!movingPosition.equals("right"));{
+                    movingPosition = "left";
                 }
             }
         });
         rightBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!movingPosition.equals("right"));{
-                    movingPosition = "left";
+                if(!movingPosition.equals("left"));{
+                    movingPosition = "right";
                 }
             }
         });
